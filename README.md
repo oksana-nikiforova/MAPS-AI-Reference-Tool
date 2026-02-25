@@ -15,6 +15,29 @@ is included in the repository.
 
 The prototype demonstrates how formal modelling and AI can be integrated to ensure consistency, traceability, and standards alignment in early IT project phases.
 
+# Local Setup and Deployment (Windows – .NET MAUI)
+
+## Prerequisites
+
+Install the following:
+
+- **Windows 10 (version 19041+) or Windows 11**
+- **Visual Studio 2022 or 2026**
+  - Workloads:
+    - **.NET Multi-platform App UI development**
+    - **Desktop development with C++**
+- **.NET SDK 9.0**
+
+> Restart your machine after installing workloads if prompted.
+
+---
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/oksana-nikiforova/MAPS-AI-Reference-Tool.git
+```
+
 Related scientific publications describing the methodology, transformation framework, and prototype validation are listed below:
 - Nikiforova O., Grabis J., Pastor O., Babris K., Miļūne M.K., Bobkovs R. Model-based methodology for development of IT project management plan and scope using AI, Proc. RCIS, 2025, https://ceur-ws.org/Vol-3987/paper7.pdf;
 - Blaževičs J.R., Nikiforova O., Pastor O. A Framework for Model-Driven AI-Assisted Generation of IT Project Management Plan and Scope Documents, Proc. FedCSIS, 2025, doi:10.15439/2025F8736;
