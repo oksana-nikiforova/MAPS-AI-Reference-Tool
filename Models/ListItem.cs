@@ -1,11 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.ObjectModel;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using MAPSAI.Core.Models;
-using MAPSAI.Models.AI;
 using MAPSAI.Services.AI;
-using MAPSAI.Services.Builders;
 using MAPSAI.Views.Global.Interfaces;
 
 namespace MAPSAI.Models
@@ -60,7 +55,6 @@ namespace MAPSAI.Models
                 var newItem = new T { Text = cleaned };
                 Collection.Add(newItem);
             }
-
 
             return Collection;
         }

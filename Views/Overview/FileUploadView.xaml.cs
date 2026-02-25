@@ -8,7 +8,6 @@ namespace MAPSAI.Views.ProjectDataFiles;
 public partial class FileUploadView : ContentView
 {
     private XmlService _xmlService;
-    private FileTextReader _fileTextReader;
     private ExcelService _excelService;
 
     public FileUploadView()
@@ -34,7 +33,6 @@ public partial class FileUploadView : ContentView
         if (Handler?.MauiContext != null && _xmlService == null)
         {
             _xmlService = Handler.MauiContext.Services.GetRequiredService<XmlService>();
-            _fileTextReader = Handler.MauiContext.Services.GetRequiredService<FileTextReader>();
             _excelService = Handler.MauiContext.Services.GetRequiredService<ExcelService>();
         }
     }

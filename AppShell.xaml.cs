@@ -12,13 +12,10 @@ namespace MAPSAI
     public partial class AppShell : Shell
     {
         private MSWordService _wordService;
-        private PdfService _pdfService;
         private ProcessModelBuilder _processModelBuilder;
         private PlantUMLProcessModelBuilder _processModelBuilderPlantUML;
         private UseCaseBuilder _useCaseBuilder;
         private PlantUMLBuilder _useCaseBuilderPlantUML;
-        private GanttBuilder _ganttBuilder;
-        private PlantUMLGanttBuilder _ganttBuilderPlantUML;
         private ExcelService _excelService;
 
         public AppShell()
@@ -43,9 +40,6 @@ namespace MAPSAI
                 _processModelBuilderPlantUML = Handler.MauiContext.Services.GetRequiredService<PlantUMLProcessModelBuilder>();
                 _useCaseBuilder = Handler.MauiContext.Services.GetRequiredService<UseCaseBuilder>();
                 _useCaseBuilderPlantUML = Handler.MauiContext.Services.GetRequiredService<PlantUMLBuilder>();
-                _ganttBuilder = Handler.MauiContext.Services.GetRequiredService<GanttBuilder>();
-                _ganttBuilderPlantUML = Handler.MauiContext.Services.GetRequiredService<PlantUMLGanttBuilder>();
-                _pdfService = Handler.MauiContext.Services.GetRequiredService<PdfService>();
             }
         }
 
@@ -161,22 +155,8 @@ namespace MAPSAI
 
             await SaveDiagramText(processPlant, "process", "plantuml");
 
-            var ganttMermaid = _ganttBuilder.Build(DataStore.Instance.Project.UserStories);
-
-            await SaveDiagramText(ganttMermaid, "gantt", "mermaid");
-
-            var ganttPlant = _ganttBuilderPlantUML.Build(DataStore.Instance.Project.UserStories);
-
-            await SaveDiagramText(ganttPlant, "gantt", "plantuml");
-
-            //scope
-            ExportExcel(new(), new());
-
             ExportWord(new(), new());
 
-            //create new Treenode here for plan
-
-            //project plan
             await _wordService.GenerateDocument(DataStore.Instance.Project.PlanTree, "Project plan", "IT_Plan");
 
         }

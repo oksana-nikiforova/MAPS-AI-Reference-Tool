@@ -1,18 +1,13 @@
 ﻿using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Maui.Views;
-using MAPSAI.Core.Models;
 using MAPSAI.Models;
-using MAPSAI.Models.AI;
 using MAPSAI.Services.AI;
-using MAPSAI.Services.Builders;
 using System.Diagnostics;
-using System.Text.Json;
 
 namespace MAPSAI.Views.Backlog;
 
 public partial class ProcessingPopup : Popup
 {
-    private StoryPointService _storyPointService;
     private ListEntryService _listEntryService;
 
     private CancellationTokenSource _cts = new();
@@ -25,21 +20,17 @@ public partial class ProcessingPopup : Popup
 
     private void OnCancelClicked(object sender, EventArgs e)
     {
-        // Disable cancel button immediately
         ((Button)sender).IsEnabled = false;
 
-        // Switch UI into "cancelling" mode
         InfoLabel.Text = "Cancelling, please wait...";
         CancelIndicator.IsVisible = true;
         CancelIndicator.IsRunning = true;
 
-        // Cancel the token
         _cts.Cancel();
     }
 
     private async void OnLoaded(object sender, EventArgs e)
     {
-        _storyPointService = Handler?.MauiContext?.Services.GetRequiredService<StoryPointService>();
         _listEntryService = Handler?.MauiContext?.Services.GetRequiredService<ListEntryService>();
 
         await Task.Delay(300);
@@ -68,12 +59,6 @@ public partial class ProcessingPopup : Popup
                 ProgressLabel.Text = "Generating Priority...";
                 userStory.Priority = await userStory.GeneratePriority(_listEntryService);
                 token.ThrowIfCancellationRequested();
-
-                if (SettingsModel.Instance.StoryPoints)
-                {
-                    ProgressLabel.Text = "Generating Story Points...";
-                    userStory.StoryPoints = _storyPointService.Predict($"As {userStory.User} I want to {userStory.Story} so that {userStory.Purpose}.").ToString();
-                }
 
                 ProgressLabel.Text = "Generating Reason...";
                 await userStory.Purpose.GenerateAsync(_listEntryService);

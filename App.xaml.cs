@@ -13,9 +13,7 @@ using CommunityToolkit.Maui.Storage;
 
 
 
-
 #if WINDOWS
-using Microsoft.UI.Xaml;
 using Microsoft.UI.Windowing;
 #endif
 
@@ -33,7 +31,6 @@ namespace MAPSAI
         public App(CustomWindow customWindow)
         {
             InitializeComponent();
-            _ = SettingsModel.Instance.LoadSettings();
             CustomWindow = customWindow;
         }
 

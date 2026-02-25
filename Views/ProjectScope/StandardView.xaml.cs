@@ -12,7 +12,6 @@ namespace MAPSAI.Views.ProjectScope;
 public partial class StandardView : ContentView
 {
     private ExcelService _excelService;
-    private PdfService _pdfService;
     private MSWordService _msWordService;
 
     private CancellationTokenSource? _generationCts;
@@ -33,7 +32,6 @@ public partial class StandardView : ContentView
         if (Handler?.MauiContext != null && _excelService == null)
         {
             _excelService = Handler.MauiContext.Services.GetRequiredService<ExcelService>();
-            _pdfService = Handler.MauiContext.Services.GetRequiredService<PdfService>();
             _msWordService = Handler.MauiContext.Services.GetRequiredService<MSWordService>();
         }
 

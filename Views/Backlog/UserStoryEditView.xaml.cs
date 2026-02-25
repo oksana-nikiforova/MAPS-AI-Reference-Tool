@@ -1,9 +1,7 @@
 using MAPSAI.Core.Models;
 using MAPSAI.Models;
 using MAPSAI.Services.AI;
-using MAPSAI.Services.Builders;
 using System.Diagnostics;
-using System.Text.Json;
 
 namespace MAPSAI.Views.Backlog;
 
@@ -14,8 +12,6 @@ public class PriorityResult
 
 public partial class UserStoryEditView : ContentView
 {
-  
-    private StoryPointService _storyPointService;
     private ListEntryService _listEntryService;
 
     public static readonly BindableProperty SelectedStoryProperty =
@@ -73,37 +69,12 @@ public partial class UserStoryEditView : ContentView
         this.FadeTo(1, 2500);
     }
 
-    public bool StoryPoints
-    {
-        get => SettingsModel.Instance.StoryPoints;
-        set
-        {
-            if (SettingsModel.Instance.StoryPoints == value)
-                return;
-
-            SettingsModel.Instance.StoryPoints = value;
-            OnPropertyChanged(nameof(StoryPoints));
-        }
-    }
-
-    protected override void OnBindingContextChanged()
-    {
-        base.OnBindingContextChanged();
-
-        SettingsModel.Instance.PropertyChanged += (_, e) =>
-        {
-            MainThread.BeginInvokeOnMainThread(() =>
-                OnPropertyChanged(nameof(StoryPoints)));
-        };
-    }
-
     protected override void OnHandlerChanged()
     {
         base.OnHandlerChanged();
 
         if (Handler?.MauiContext != null)
         {
-            _storyPointService = Handler.MauiContext.Services.GetRequiredService<StoryPointService>();
             _listEntryService = Handler.MauiContext.Services.GetRequiredService<ListEntryService>();
         }
     }
@@ -127,27 +98,6 @@ public partial class UserStoryEditView : ContentView
             IsWorking = true;
         }
         catch (Exception ex) 
-        {
-            Debug.WriteLine(ex.Message);
-            IsGenerating = false;
-            IsWorking = true;
-        }
-    }
-
-    private async void GenerateStoryPoints(object sender, EventArgs e)
-    {
-        try
-        {
-            if (SelectedStory == null) return;
-            IsGenerating = true;
-            IsWorking = false;
-
-            SelectedStory.StoryPoints = SelectedStory.GenerateStoryPoints(_storyPointService);
-
-            IsGenerating = false;
-            IsWorking = true;
-        }
-        catch (Exception ex)
         {
             Debug.WriteLine(ex.Message);
             IsGenerating = false;

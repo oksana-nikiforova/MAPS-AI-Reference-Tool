@@ -1,28 +1,16 @@
 using MAPSAI.Models;
-using MAPSAI.Services.AI;
-using System.Diagnostics;
-using System.Text;
 
 namespace MAPSAI.Pages;
 
 public partial class ProjectDataFilesPage : ContentPage
 {
-    private StoryPointService _storyPointsService;
 
-	public ProjectDataFilesPage(StoryPointService storyPointService)
+	public ProjectDataFilesPage()
 	{
         InitializeComponent();
         BindingContext = this;
         ActionsRunner.Instance.ProjectFilesUpload += OnProjectFilesUpload;
         ActionsRunner.Instance.UserStoriesChanged += OnProjectFilesUpload;
-        _storyPointsService = storyPointService;
-
-        TestResponse();
-    }
-
-    public async void TestResponse()
-    {
-        await _storyPointsService.InitializeAsync();
     }
 
     public List<ViewChange> Actions { get; set; } = new()

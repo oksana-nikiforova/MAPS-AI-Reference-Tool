@@ -29,9 +29,7 @@ public partial class SectionListener : ContentView
         [
             new ProjectScopeView() { IsVisible = false, AutomationId = "0", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand },
             new ProjectScopeSpecificView() { IsVisible = false, AutomationId = "1", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand },
-            new StakeholdersView() { IsVisible = false, AutomationId = "2", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand },
-            new BudgetView() { IsVisible = false, AutomationId = "3", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand },
-            new TeamView() { IsVisible = false, AutomationId = "4", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand },
+            new StakeholdersView() { IsVisible = false, AutomationId = "2", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand }
         ];
 
 

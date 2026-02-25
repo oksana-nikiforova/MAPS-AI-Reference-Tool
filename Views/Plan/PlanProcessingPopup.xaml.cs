@@ -6,7 +6,6 @@ using MAPSAI.Models;
 using MAPSAI.Models.AI;
 using MAPSAI.Services.AI;
 using MAPSAI.Services.Builders;
-using Spire.Pdf.Core.Fonts.CMap;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Reflection;
@@ -34,7 +33,6 @@ public class AgentRunResponse
 
 public partial class PlanProcessingPopup : Popup
 {
-    private StoryPointService _storyPointService;
 
     private CancellationTokenSource _cts = new();
 
@@ -89,8 +87,6 @@ public partial class PlanProcessingPopup : Popup
 
     private async void OnLoaded(object sender, EventArgs e)
     {
-        _storyPointService = Handler?.MauiContext?.Services.GetRequiredService<StoryPointService>();
-
         await Task.Delay(300);
         await GeneratePlanSections(_cts.Token);
     }

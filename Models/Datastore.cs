@@ -12,7 +12,6 @@ namespace MAPSAI.Models
     {
         private DataStore() 
         {
-            //ActionsRunner.Instance.ProjectPlanUploaded += AddNewPlan;
         }
 
         private static readonly Lazy<DataStore> lazy = new(() => new DataStore());

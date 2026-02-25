@@ -1,6 +1,4 @@
-﻿
-using DocumentFormat.OpenXml.Presentation;
-using MAPSAI.Core.Models;
+﻿using MAPSAI.Core.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -44,20 +42,6 @@ namespace MAPSAI.Models
 
         public ObservableCollection<Standard> Standards { get; set; } = [];
 
-        private Standard _activeStandard;
-        public Standard ActiveStandard
-        {
-            get => _activeStandard;
-            set
-            {
-                if (_activeStandard != value)
-                {
-                    _activeStandard = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
         public void AddNewPlan(object? sender, Standard standard)
         {
             Standards.Add(standard);
@@ -66,7 +50,6 @@ namespace MAPSAI.Models
         public ObservableCollection<TreeNode<string>> PlanTree { get; set; }
 
         public FileInfo BusinessProcessModelFile { get; set; } = new();
-        public FileInfo BusinessProcessModelExcelFile { get; set; } = new();
         public ObservableCollection<FileInfo> Files { get; set; } = [];
 
         public Dictionary<string, string> PlanDictionary { get; set; } = [];

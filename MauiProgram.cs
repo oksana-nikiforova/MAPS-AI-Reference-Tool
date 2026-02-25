@@ -39,20 +39,15 @@ namespace MAPSAI
             //Document processing
             builder.Services.AddTransient<ExcelService>();
             builder.Services.AddTransient<XmlService>();
-            builder.Services.AddTransient<FileTextReader>();
-            builder.Services.AddTransient<PdfService>();
             builder.Services.AddTransient<MSWordService>();
 
             //Builders
             builder.Services.AddTransient<UseCaseBuilder>();
             builder.Services.AddTransient<ProcessModelBuilder>();
-            builder.Services.AddTransient<GanttBuilder>();
             builder.Services.AddTransient<PlantUMLBuilder>();
             builder.Services.AddTransient<PlantUMLProcessModelBuilder>();
-            builder.Services.AddTransient<PlantUMLGanttBuilder>();
 
             //AI / ML
-            builder.Services.AddSingleton<StoryPointService>();
             builder.Services.AddSingleton<ListEntryService>();
 
             //Random

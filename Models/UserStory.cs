@@ -1,6 +1,5 @@
 ﻿using MAPSAI.Models;
 using MAPSAI.Services.AI;
-using MAPSAI.Services.Builders;
 using MAPSAI.Views.Backlog;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -127,26 +126,6 @@ namespace MAPSAI.Core.Models
                 var result = JsonSerializer.Deserialize<PriorityResult>(json);
 
                 return result!.priority;
-
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-                return "";
-            }
-        }
-
-        public string GenerateStoryPoints(StoryPointService storyPointService)
-        {
-            try
-            {
-                var prediction = storyPointService.Predict($"As {this.User} I want to {this.Story} so that {this.Purpose}.");
-
-                StoryPoints = prediction.ToString();
-
-                Debug.WriteLine($"GOT PREDICTION: {prediction}");
-
-                return prediction.ToString();
 
             }
             catch (Exception ex)

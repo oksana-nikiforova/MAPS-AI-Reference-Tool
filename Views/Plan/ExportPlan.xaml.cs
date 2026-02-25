@@ -7,7 +7,6 @@ namespace MAPSAI.Views.Plan;
 public partial class ExportPlan : ContentView
 {
     private ExcelService _excelService;
-    private PdfService _pdfService;
     private MSWordService _msWordService;
 
     public ExportPlan()
@@ -23,7 +22,6 @@ public partial class ExportPlan : ContentView
         if (Handler?.MauiContext != null && _excelService == null)
         {
             _excelService = Handler.MauiContext.Services.GetRequiredService<ExcelService>();
-            _pdfService = Handler.MauiContext.Services.GetRequiredService<PdfService>();
             _msWordService = Handler.MauiContext.Services.GetRequiredService<MSWordService>();
         }
     }

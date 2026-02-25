@@ -62,19 +62,6 @@
                             VerticalOptions="Center" />
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Column="3" IsVisible="{Binding StoryPoints, Source={x:Reference Name=RootView}}">
-                    <Label Text="Story Points" />
-                    <HorizontalStackLayout Spacing="10">
-                        <Entry Text="{Binding SelectedStory.StoryPoints, Mode=TwoWay}" WidthRequest="150" />
-
-                        <Button
-                            Clicked="GenerateStoryPoints"
-                            IsEnabled="{Binding IsWorking, Source={x:Reference Name=RootView}}"
-                            Style="{StaticResource DefaultButtonStyle}"
-                            Text="Generate" />
-                    </HorizontalStackLayout>
-                </VerticalStackLayout>
             </Grid>
 
             <controls:BindableEntryView EntryItem="{Binding SelectedStory.Purpose}" />

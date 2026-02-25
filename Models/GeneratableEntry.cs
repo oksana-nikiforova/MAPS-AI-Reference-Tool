@@ -1,12 +1,6 @@
-﻿using MAPSAI.Core.Models;
-using MAPSAI.Models.AI;
-using MAPSAI.Services.AI;
-using MAPSAI.Services.Builders;
+﻿using MAPSAI.Services.AI;
 using MAPSAI.Views.Global.Interfaces;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Text;
-using System.Text.Json.Serialization;
 
 namespace MAPSAI.Models
 {

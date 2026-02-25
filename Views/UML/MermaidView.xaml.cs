@@ -2,7 +2,6 @@
 using MAPSAI.Models;
 using MAPSAI.Services;
 using MAPSAI.Services.Builders;
-using System.Buffers.Text;
 using System.Diagnostics;
 
 namespace MAPSAI.Views.UML;
@@ -10,11 +9,9 @@ namespace MAPSAI.Views.UML;
 public partial class MermaidView : ContentView
 {
     private PlantUMLBuilder _plantUMLBuilder;
-    private PlantUMLGanttBuilder _plantUMLGanttBuilder;
     private PlantUMLProcessModelBuilder _plantUMLProcessModelBuilder;
 
     private UseCaseBuilder _useCaseBuilder;
-    private GanttBuilder _ganttBuilder;
     private ProcessModelBuilder _processModelBuilder;
 
     public static readonly BindableProperty DiagramTypeProperty =
@@ -62,10 +59,8 @@ public partial class MermaidView : ContentView
         if (Handler?.MauiContext != null && _plantUMLBuilder == null)
         {
             _plantUMLBuilder = Handler.MauiContext.Services.GetRequiredService<PlantUMLBuilder>();
-            _plantUMLGanttBuilder = Handler.MauiContext.Services.GetRequiredService<PlantUMLGanttBuilder>();
             _plantUMLProcessModelBuilder = Handler.MauiContext.Services.GetRequiredService<PlantUMLProcessModelBuilder>();
             _useCaseBuilder = Handler.MauiContext.Services.GetRequiredService<UseCaseBuilder>();
-            _ganttBuilder = Handler.MauiContext.Services.GetRequiredService<GanttBuilder>();
             _processModelBuilder = Handler.MauiContext.Services.GetRequiredService<ProcessModelBuilder>();
         }
 
@@ -125,14 +120,6 @@ public partial class MermaidView : ContentView
                 MermaidDiagram = dia;
                 break;
 
-            case "GANTT":
-                var dia1 = _ganttBuilder.Build(DataStore.Instance.Project.UserStories);
-
-                if (MermaidDiagram == dia1) return;
-
-                MermaidDiagram = dia1;
-                break;
-
             case "PROCESS":
                 var dia2 = _processModelBuilder.Build(DataStore.Instance.Project.UserStories);
 
@@ -180,11 +167,6 @@ public partial class MermaidView : ContentView
                     case "USE_CASE":
                         var diaUse = _plantUMLBuilder.Build(DataStore.Instance.Project.UserStories);
                         _ = SaveDiagramText(diaUse, "use_case", "plantuml");
-                        break;
-
-                    case "GANTT":
-                        var diaGantt = _plantUMLGanttBuilder.Build(DataStore.Instance.Project.UserStories);
-                        _ = SaveDiagramText(diaGantt, "roadmap", "plantuml");
                         break;
 
                     case "PROCESS":
