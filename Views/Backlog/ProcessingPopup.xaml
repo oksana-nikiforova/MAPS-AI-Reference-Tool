@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="MAPSAI.Views.Backlog.ProcessingPopup"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        Spacing="15"
+        VerticalOptions="Center">
+        <Label
+            x:Name="InfoLabel"
+            FontSize="18"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Preparing to process stories..."
+            TextColor="{StaticResource Primary}" />
+
+        <Label
+            x:Name="ProgressLabel"
+            FontSize="18"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Generating..."
+            TextColor="{StaticResource Primary}" />
+
+        <ProgressBar
+            x:Name="ProgressBar"
+            HeightRequest="6"
+            Progress="0"
+            ProgressColor="{StaticResource Primary}"
+            WidthRequest="250" />
+
+        <Label
+            FontAttributes="Bold"
+            FontSize="14"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Please do not close the app while processing."
+            TextColor="{StaticResource Primary}" />
+
+        <ActivityIndicator />
+
+        <Button
+            Padding="12"
+            Clicked="OnCancelClicked"
+            Style="{StaticResource DefaultButtonStyle}"
+            Text="Cancel"
+            TextColor="White" />
+
+        <ActivityIndicator
+            x:Name="CancelIndicator"
+            HeightRequest="30"
+            IsRunning="False"
+            IsVisible="False"
+            WidthRequest="30"
+            Color="{StaticResource Primary}" />
+
+    </VerticalStackLayout>
+</toolkit:Popup>

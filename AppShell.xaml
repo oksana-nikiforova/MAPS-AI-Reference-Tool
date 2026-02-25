@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAPSAI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAPSAI"
+    xmlns:pages="clr-namespace:MAPSAI.Pages"
+    Title="Project Scoping Tool">
+
+    <Shell.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Clicked="OnNewClicked" Text="New" />
+            <MenuFlyoutItem Clicked="OnOpenClicked" Text="Open" />
+            <MenuFlyoutItem Clicked="OnSaveClicked" Text="Save" />
+        </MenuBarItem>
+
+        <MenuBarItem Text="Tools">
+            <MenuFlyoutItem Clicked="OnExportAllClicked" Text="Export all" />
+        </MenuBarItem>
+    </Shell.MenuBarItems>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:ProjectDataFilesPage}"
+        Route="Overview"
+        Shell.NavBarIsVisible="True" />
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:BacklogPage}"
+        Route="Backlog"
+        Shell.NavBarIsVisible="True" />
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:ProjectScopePage}"
+        Route="Project_scope"
+        Shell.NavBarIsVisible="True" />
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:PlanPage}"
+        Route="Plan"
+        Shell.NavBarIsVisible="True" />
+
+</Shell>

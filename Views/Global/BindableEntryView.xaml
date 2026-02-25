@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.BindableEntryView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="This">
+
+    <VerticalStackLayout>
+        <Label Text="{Binding EntryItem.Name, Source={x:Reference This}}" />
+
+        <Grid
+            Padding="5"
+            ColumnDefinitions="*,Auto,Auto,Auto"
+            ColumnSpacing="10"
+            RowDefinitions="Auto">
+
+            <Editor
+                Grid.Column="0"
+                AutoSize="TextChanges"
+                Placeholder="Enter text..."
+                Text="{Binding EntryItem.Text, Source={x:Reference This}}"
+                VerticalOptions="Center" />
+
+            <CheckBox
+                Grid.Column="1"
+                IsChecked="{Binding EntryItem.IsUsed, Source={x:Reference This}}"
+                VerticalOptions="Center" />
+
+            <Button
+                Grid.Column="2"
+                Clicked="Generate"
+                Style="{StaticResource DefaultButtonStyle}"
+                Text="Generate"
+                VerticalOptions="Center" />
+
+            <ActivityIndicator
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                IsRunning="{Binding EntryItem.IsGenerating, Source={x:Reference This}}"
+                VerticalOptions="Center" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentView>

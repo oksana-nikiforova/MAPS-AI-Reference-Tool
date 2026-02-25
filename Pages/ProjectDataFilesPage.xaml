@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAPSAI.Pages.ProjectDataFilesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:backlogviews="clr-namespace:MAPSAI.Views.Backlog"
+    xmlns:global="clr-namespace:MAPSAI.Views.Global"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:umlViews="clr-namespace:MAPSAI.Views.UML"
+    xmlns:uploadviews="clr-namespace:MAPSAI.Views.ProjectDataFiles"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+    xmlns:views="clr-namespace:MAPSAI.Views">
+
+    <Grid
+        Padding="6"
+        ColumnSpacing="6"
+        RowSpacing="0">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.0*" />
+            <ColumnDefinition Width="8.0*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Stroke="#005050">
+            <ScrollView>
+
+                <material:TabView>
+
+                    <material:TabItem Title="Import">
+                        <material:TabItem.ContentTemplate>
+                            <DataTemplate>
+                                <Grid RowDefinitions="Auto,*">
+
+                                    <uploadviews:FileUploadView Grid.Row="0" />
+
+                                    <views:EventDispatcherView
+                                        Grid.Row="1"
+                                        DisplayProperty="Select domain to display"
+                                        Events="{Binding Actions}" />
+
+                                </Grid>
+                            </DataTemplate>
+                        </material:TabItem.ContentTemplate>
+                    </material:TabItem>
+
+                </material:TabView>
+            </ScrollView>
+        </Border>
+
+        <Border Grid.Column="1" Stroke="#005050">
+            <Grid RowDefinitions="Auto,*,Auto">
+                <views:NavigationView Grid.Row="0" />
+
+                <views:WindowListenerView
+                    x:Name="ListenerView"
+                    Grid.Row="1"
+                    Events="{Binding Actions}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+
+                <views:ConsoleView Grid.Row="2" />
+            </Grid>
+        </Border>
+
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,1129 @@
+{
+  "Project": {
+    "Title": "Information System for Bachelor Thesis Topic Selection",
+    "ProjectNumber": "RTU-2025",
+    "Standards": [
+      {
+        "ID": "13677bea-5b73-4413-b0df-fb95a2b32a99",
+        "Name": "Default standard",
+        "Link": "C:\\Users\\rihar\\Downloads\\default_standard (2).xlsx",
+        "IsSelected": true,
+        "Tree": [
+          {
+            "Value": "1. Scope management",
+            "Instruction": null,
+            "Children": [
+              {
+                "Value": "1.1. Product vision and roadmap",
+                "Instruction": null,
+                "Children": [
+                  {
+                    "Value": "1.1.1 Vision statement",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "1.1.2. Roadmap Phases",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "1.1.3. Strategic Alignment",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "1.1.4. Identifying project\u0027s stakeholders",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  }
+                ],
+                "ChildrenCount": 4,
+                "Parent": null,
+                "IsExpanded": false,
+                "Content": null,
+                "IsActive": false
+              },
+              {
+                "Value": "1.2. Backlog management",
+                "Instruction": null,
+                "Children": [
+                  {
+                    "Value": "1.2.1. Product Backlog Structure",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "1.2.2. Backlog Refinement",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "1.2.3. Change Control in Backlog",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  }
+                ],
+                "ChildrenCount": 3,
+                "Parent": null,
+                "IsExpanded": false,
+                "Content": null,
+                "IsActive": false
+              }
+            ],
+            "ChildrenCount": 3,
+            "Parent": {
+              "Value": "Root",
+              "Instruction": "",
+              "Children": null,
+              "ChildrenCount": 4,
+              "Parent": null,
+              "IsExpanded": false,
+              "Content": null,
+              "IsActive": false
+            },
+            "IsExpanded": false,
+            "Content": null,
+            "IsActive": false
+          },
+          {
+            "Value": "2. Schedule management",
+            "Instruction": null,
+            "Children": [
+              {
+                "Value": "2.1. Project team and roles",
+                "Instruction": null,
+                "Children": [
+                  {
+                    "Value": "2.1.1 Team identification",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "2.1.2. Role assigning",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "2.1.3. Responsibility matrix",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  }
+                ],
+                "ChildrenCount": 3,
+                "Parent": null,
+                "IsExpanded": false,
+                "Content": null,
+                "IsActive": false
+              },
+              {
+                "Value": "2.2. Sprint planning",
+                "Instruction": null,
+                "Children": [
+                  {
+                    "Value": "2.2.1. Sprint Duration and Cadence",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "2.2.2. Sprint Objectives",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "2.2.3. Sprint Artifacts",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  }
+                ],
+                "ChildrenCount": 3,
+                "Parent": null,
+                "IsExpanded": false,
+                "Content": null,
+                "IsActive": false
+              },
+              {
+                "Value": "2.3. Budget Management",
+                "Instruction": null,
+                "Children": [
+                  {
+                    "Value": "2.3.1 Total project cost",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "2.3.2 Cost Breakdown Structure",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "2.3.3 Cost Optimization Measures",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  }
+                ],
+                "ChildrenCount": 3,
+                "Parent": null,
+                "IsExpanded": false,
+                "Content": null,
+                "IsActive": false
+              }
+            ],
+            "ChildrenCount": 3,
+            "Parent": {
+              "Value": "Root",
+              "Instruction": "",
+              "Children": null,
+              "ChildrenCount": 4,
+              "Parent": null,
+              "IsExpanded": false,
+              "Content": null,
+              "IsActive": false
+            },
+            "IsExpanded": false,
+            "Content": null,
+            "IsActive": false
+          },
+          {
+            "Value": "3. Execution and delivery",
+            "Instruction": null,
+            "Children": [
+              {
+                "Value": "3.1. User stories and acceptance criteria",
+                "Instruction": null,
+                "Children": [
+                  {
+                    "Value": "3.1.1 User Strories",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "3.1.2 Acceptance criteria",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  }
+                ],
+                "ChildrenCount": 2,
+                "Parent": null,
+                "IsExpanded": true,
+                "Content": null,
+                "IsActive": false
+              }
+            ],
+            "ChildrenCount": 1,
+            "Parent": {
+              "Value": "Root",
+              "Instruction": "",
+              "Children": null,
+              "ChildrenCount": 4,
+              "Parent": null,
+              "IsExpanded": false,
+              "Content": null,
+              "IsActive": false
+            },
+            "IsExpanded": true,
+            "Content": null,
+            "IsActive": false
+          },
+          {
+            "Value": "4. Performance and Risk Management",
+            "Instruction": null,
+            "Children": [
+              {
+                "Value": "4.1. Managing Risks",
+                "Instruction": null,
+                "Children": [
+                  {
+                    "Value": "4.1.1. Risk register",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "4.1.2. Mitigation Plans",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  }
+                ],
+                "ChildrenCount": 2,
+                "Parent": null,
+                "IsExpanded": true,
+                "Content": null,
+                "IsActive": false
+              },
+              {
+                "Value": "4.2. Performance Monitoring and Evaluation",
+                "Instruction": null,
+                "Children": [
+                  {
+                    "Value": "4.2.1. Key Performance Indicators (KPIs)",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "4.2.2. Monitoring Tools and Methods",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  },
+                  {
+                    "Value": "4.2.3. Corrective and Preventive Actions (CAPA)",
+                    "Instruction": null,
+                    "Children": [],
+                    "ChildrenCount": 0,
+                    "Parent": null,
+                    "IsExpanded": false,
+                    "Content": null,
+                    "IsActive": false
+                  }
+                ],
+                "ChildrenCount": 3,
+                "Parent": null,
+                "IsExpanded": true,
+                "Content": null,
+                "IsActive": false
+              }
+            ],
+            "ChildrenCount": 2,
+            "Parent": {
+              "Value": "Root",
+              "Instruction": "",
+              "Children": null,
+              "ChildrenCount": 4,
+              "Parent": null,
+              "IsExpanded": false,
+              "Content": null,
+              "IsActive": false
+            },
+            "IsExpanded": false,
+            "Content": null,
+            "IsActive": false
+          }
+        ]
+      }
+    ],
+    "ActiveStandard": null,
+    "BusinessProcessModelFile": {
+      "Path": "",
+      "TextContent": ""
+    },
+    "BusinessProcessModelExcelFile": {
+      "Path": "",
+      "TextContent": ""
+    },
+    "Files": [],
+    "UserStories": [
+      {
+        "ID": "5",
+        "User": "Supervisor",
+        "Story": "Add direction to the topic list",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "students can have more relevant and up-to-date thesis topic choices",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Supervisor can create a new topic direction with title and description.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Newly added direction enters a \u0027pending approval\u0027 state.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Added direction becomes visible to the Study Program Director for approval.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "high",
+        "StartDate": "2025-02-10T00:00:00",
+        "EndDate": "2025-02-17T00:00:00",
+        "Connections": [
+          {
+            "ID": "31",
+            "Source": "5",
+            "Target": "6",
+            "Text": "topic_list"
+          }
+        ]
+      },
+      {
+        "ID": "6",
+        "User": "Study Program Director",
+        "Story": "Approve the proposed direction list",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "only academically valid and appropriate thesis directions become available",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Director can view all pending topic directions.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Director can approve or reject each direction with justification.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Approved directions become visible to students in the available topic list.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-02-17T00:00:00",
+        "EndDate": "2025-02-24T00:00:00",
+        "Connections": [
+          {
+            "ID": "34",
+            "Source": "6",
+            "Target": "29",
+            "Text": "topic_list"
+          }
+        ]
+      },
+      {
+        "ID": "29",
+        "User": "Student",
+        "Story": "View available topics for the bachelor\u0027s thesis",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "I can understand all possible thesis options before selecting one",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Student can view a list of all approved and available topics.",
+              "IsUsed": false
+            },
+            {
+              "Text": "List displays topic title, supervisor, and short description.",
+              "IsUsed": false
+            },
+            {
+              "Text": "System hides topics that are already selected by other students.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-02-24T00:00:00",
+        "EndDate": "2025-03-03T00:00:00",
+        "Connections": [
+          {
+            "ID": "3",
+            "Source": "29",
+            "Target": "2",
+            "Text": "topic_list"
+          }
+        ]
+      },
+      {
+        "ID": "2",
+        "User": "Student",
+        "Story": "Choose a direction from the list offered by supervisors",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "I can initiate the thesis assignment process",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Student can select exactly one topic direction from the list.",
+              "IsUsed": false
+            },
+            {
+              "Text": "System sends the selected direction to the supervisor for review.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Student receives confirmation that the selection is submitted.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": true,
+        "Priority": "medium",
+        "StartDate": "2025-03-03T00:00:00",
+        "EndDate": "2025-03-10T00:00:00",
+        "Connections": [
+          {
+            "ID": "7",
+            "Source": "2",
+            "Target": "30",
+            "Text": "topic"
+          }
+        ]
+      },
+      {
+        "ID": "24",
+        "User": "Supervisor",
+        "Story": "Release the taken topic",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "the topic becomes available to other students after rejection or cancellation",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Supervisor can mark a previously selected topic as released.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Topic status automatically changes to \u0027available\u0027.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Student is notified that their previously selected topic was released.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-03-10T00:00:00",
+        "EndDate": "2025-03-17T00:00:00",
+        "Connections": [
+          {
+            "ID": "40",
+            "Source": "24",
+            "Target": "29",
+            "Text": "topic"
+          }
+        ]
+      },
+      {
+        "ID": "10",
+        "User": "Supervisor",
+        "Story": "Reject student\u0027s choice(topic status has changed)",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "the student can review feedback and select a more suitable topic",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Supervisor can reject a student\u0027s selected topic.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Supervisor must provide a justification or comment.",
+              "IsUsed": false
+            },
+            {
+              "Text": "System resets the topic to \u0027available\u0027 and notifies the student.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-03-17T00:00:00",
+        "EndDate": "2025-03-24T00:00:00",
+        "Connections": [
+          {
+            "ID": "27",
+            "Source": "10",
+            "Target": "24",
+            "Text": "topic"
+          }
+        ]
+      },
+      {
+        "ID": "30",
+        "User": "Supervisor",
+        "Story": "Discuss topics with student",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "the student can receive guidance on choosing the most suitable topic",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Supervisor can view the student\u0027s selected direction.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Supervisor can request clarification or schedule a discussion.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Discussion results are recorded or acknowledged by both parties.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-03-24T00:00:00",
+        "EndDate": "2025-03-31T00:00:00",
+        "Connections": [
+          {
+            "ID": "11",
+            "Source": "30",
+            "Target": "9",
+            "Text": "topic_accepted"
+          },
+          {
+            "ID": "13",
+            "Source": "30",
+            "Target": "10",
+            "Text": "topic_rejected"
+          }
+        ]
+      },
+      {
+        "ID": "30",
+        "User": "Student",
+        "Story": "Discuss topics with student",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "the student can receive guidance on choosing the most suitable topic",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Supervisor can view the student\u0027s selected direction.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Supervisor can request clarification or schedule a discussion.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Discussion results are recorded or acknowledged by both parties.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-03-24T00:00:00",
+        "EndDate": "2025-03-31T00:00:00",
+        "Connections": [
+          {
+            "ID": "11",
+            "Source": "30",
+            "Target": "9",
+            "Text": "topic_accepted"
+          },
+          {
+            "ID": "13",
+            "Source": "30",
+            "Target": "10",
+            "Text": "topic_rejected"
+          }
+        ]
+      },
+      {
+        "ID": "9",
+        "User": "Supervisor",
+        "Story": "Accept student\u0027s choice and define the topic",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "the student\u0027s topic can be formally submitted for program director approval",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "I can add a new direction with a name and description.",
+              "IsUsed": false
+            },
+            {
+              "Text": "The direction is saved with status \u0027proposed\u0027.",
+              "IsUsed": false
+            },
+            {
+              "Text": "An audit log records who added it and when.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-03-31T00:00:00",
+        "EndDate": "2025-04-07T00:00:00",
+        "Connections": [
+          {
+            "ID": "16",
+            "Source": "9",
+            "Target": "21",
+            "Text": "application"
+          }
+        ]
+      },
+      {
+        "ID": "21",
+        "User": "Study Program Director",
+        "Story": "Review application",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "I can validate that the proposed thesis topic meets academic standards",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Director can view the full student application.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Director can request clarification from the supervisor if needed.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Director can move the application to \u0027approved\u0027 or \u0027rejected\u0027 states.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-04-07T00:00:00",
+        "EndDate": "2025-04-14T00:00:00",
+        "Connections": [
+          {
+            "ID": "18",
+            "Source": "21",
+            "Target": "20",
+            "Text": "application_rejected"
+          },
+          {
+            "ID": "22",
+            "Source": "21",
+            "Target": "15",
+            "Text": "application_accepted"
+          }
+        ]
+      },
+      {
+        "ID": "20",
+        "User": "Study Program Director",
+        "Story": "Reject student\u0027s application",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "the student and supervisor can revise the topic and resubmit it",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Director can reject the application with a required justification.",
+              "IsUsed": false
+            },
+            {
+              "Text": "System notifies both student and supervisor about the rejection.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Topic is released back to the available list.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-04-14T00:00:00",
+        "EndDate": "2025-04-21T00:00:00",
+        "Connections": []
+      },
+      {
+        "ID": "15",
+        "User": "Study Program Director",
+        "Story": "Approve student\u0027s application",
+        "Purpose": {
+          "Name": "So that (Reason or Business value):",
+          "Instruction": "business value of the story",
+          "PromptKey": "PurposePrompt",
+          "Text": "the student can officially start working on the bachelor thesis",
+          "IsUsed": false,
+          "IsGenerating": false
+        },
+        "AcceptanceCriteria": {
+          "ListName": "Acceptance criteria",
+          "Instruction": "no further instruction",
+          "Collection": [
+            {
+              "Text": "Director can approve the application.",
+              "IsUsed": false
+            },
+            {
+              "Text": "System updates the topic status to \u0027assigned\u0027.",
+              "IsUsed": false
+            },
+            {
+              "Text": "Student and supervisor receive confirmation notifications.",
+              "IsUsed": false
+            }
+          ],
+          "PromptKey": "AcceptanceCriteriaPrompt"
+        },
+        "IsSelected": false,
+        "Priority": "medium",
+        "StartDate": "2025-04-21T00:00:00",
+        "EndDate": "2025-04-28T00:00:00",
+        "Connections": [
+          {
+            "ID": "38",
+            "Source": "15",
+            "Target": "37",
+            "Text": "application_accepted"
+          }
+        ]
+      }
+    ],
+    "ProjectPurpose": {
+      "Name": "Purpose of project:",
+      "Instruction": "high-level narrative regarding what this project is expected to accomplish \u0026 its benefits",
+      "PromptKey": "DefaultEntryPrompt",
+      "Text": "The purpose of the project is to create a digital solution that simplifies and improves the management of bachelor thesis topic selection within a university study program. By replacing the current manual and fragmented process with an integrated information system, the project aims to ensure better coordination between students, supervisors, and the program director. The system will enhance transparency, reduce administrative workload, and provide a structured, traceable workflow for topic submission, review, and approval.",
+      "IsUsed": false,
+      "IsGenerating": false
+    },
+    "Background": {
+      "Name": "Background:",
+      "Instruction": "brief narrative regarding what led to this project proposal",
+      "PromptKey": "DefaultEntryPrompt",
+      "Text": "In many higher education institutions, the process of selecting and approving bachelor thesis topics is often handled manually \u2014 through emails, spreadsheets, and informal communication. This approach leads to inefficiencies, such as a lack of transparency in topic availability, unclear responsibilities, miscommunication between students and supervisors, and difficulties tracking the status of submissions.\rAt present, supervisors propose topics independently, and students must contact them individually to discuss options. The program director often has limited visibility into the entire process and relies on fragmented updates. There is no centralized system to manage topic submissions, approvals, or status changes.\rRecognizing these challenges, this project was initiated to design and implement an information system that would centralize and automate the topic selection workflow. The new system will ensure clear communication, timely approvals, and reliable data management for all parties involved.",
+      "IsUsed": false,
+      "IsGenerating": false
+    },
+    "Deliverables": {
+      "ListName": "Deliverable",
+      "Instruction": "a sampling of key deliverables",
+      "Collection": [
+        {
+          "Text": "Student Topic Selection Interface: A working system screen/page where students can browse and select topics.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Supervisor Topic Review Interface: A functional interface enabling supervisors to accept, reject, or modify student topic choices",
+          "IsUsed": false
+        },
+        {
+          "Text": "Topic Management Module: A completed module enabling supervisors and directors to add, edit, approve, or release topics.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Student Thesis Application Form - A fully implemented digital application sent to the Study Program Director for approval.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Application Review Module: A working system feature allowing the director to approve or reject thesis applications.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Automated Notification System: System-generated alerts sent to students, supervisors, and directors when statuses change.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Workflow Automation Engine: Implemented logic controlling transitions: topic_accepted, topic_rejected, application_accepted, application_rejected.",
+          "IsUsed": false
+        },
+        {
+          "Text": "User Roles \u0026 Access Control Setup: Completed configuration that defines permissions for students, supervisors, and directors.",
+          "IsUsed": false
+        },
+        {
+          "Text": "System Deployment Package \u0026 User Documentation: Final packaged system release with installation steps and user guides for all roles.",
+          "IsUsed": false
+        }
+      ],
+      "PromptKey": "DefaultListPrompt"
+    },
+    "Stakeholders": {
+      "ListName": "Stakeholder",
+      "Instruction": "those involved in or who may be affected by project activities",
+      "Collection": [
+        {
+          "Text": "Students: Primary users who browse topics, select thesis directions, and submit applications.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Supervisors (Academic Staff): Review student topic selections, accept or reject topics, propose new directions, and guide students.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Study Program Director: Approves or rejects new topic directions and evaluates final student applications.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Faculty Administration / Study Office: Oversees the overall bachelor thesis process, ensures compliance with academic procedures, and supports system adoption.",
+          "IsUsed": false
+        },
+        {
+          "Text": "System Administrators / IT Support: Maintain the platform, manage user accounts, ensure system availability, and handle technical issues.",
+          "IsUsed": false
+        },
+        {
+          "Text": "University Management: Stakeholders interested in quality assurance, process transparency, and alignment with institutional policies.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Developers / Project Team: Responsible for designing, building, testing, and deploying the system.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Quality Assurance Team (QA/Testers): Ensures the system meets functional requirements, works correctly, and supports the workflow.",
+          "IsUsed": false
+        }
+      ],
+      "PromptKey": "DefaultListPrompt"
+    },
+    "ResourceRequirements": {
+      "ListName": "Resource requirements",
+      "Instruction": "Resources likely to be required to deliver the project, including human roles, technical assets, and organizational support.",
+      "Collection": [
+        {
+          "Text": "Development Environment (IDE \u0026 Tooling): Essential for writing and maintaining the system\u2019s code. Includes IDEs, build tools, and debugging utilities.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Database Management System (DBMS): Stores all critical project data such as topics, users, applications, and workflow states.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Web/Application Server: Required for hosting and running the system so students, supervisors, and directors can access it.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Access Control \u0026 Authentication System: Provides secure login and role-based permissions for students, supervisors, and program directors.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Notification Service: Enables automated system messages (email or internal notifications) for topic acceptance, rejection, and application status updates.",
+          "IsUsed": false
+        }
+      ],
+      "PromptKey": "DefaultListPrompt"
+    },
+    "OperationsSupport": {
+      "Name": "Operations \u0026 Support:",
+      "Instruction": "define product ownership and who is responsible for product maintenance \u0026 support",
+      "PromptKey": "DefaultEntryPrompt",
+      "Text": "The system will be maintained through defined operational procedures that ensure reliability, continuous availability, and efficient support for all users. System administrators will be responsible for monitoring system performance, managing user accounts, performing regular data backups, and ensuring that topic lists, user roles, and workflows remain properly configured. A dedicated support channel will be available to students, supervisors, and program directors for issue reporting, system inquiries, and assistance with functionality. The support team will track and resolve incidents according to predefined response times and escalation rules. Regular maintenance windows will be scheduled to apply updates, implement improvements, and ensure the system operates in alignment with university IT policies. Documentation for users and administrators will be kept up-to-date to support effective long-term operation.",
+      "IsUsed": false,
+      "IsGenerating": false
+    },
+    "SafetySecurity": {
+      "ListName": "Safety, Security \u0026 Risks",
+      "Instruction": "",
+      "Collection": [
+        {
+          "Text": "The system will comply with institutional security standards and data protection regulations to safeguard student and faculty information.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Security measures include authenticated user access, encrypted data transmission, and role-based permissions to prevent unauthorized access to topic lists, applications, and approvals.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Regular vulnerability assessments and security patches will reduce exposure to cyber threats.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Key risks include unauthorized modification of topics, incorrect approvals, data inconsistency, system downtime during peak topic-selection periods, and potential privacy breaches.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Mitigation strategies involve implementing audit logs, automated error validation, frequent database backups, continuous monitoring, and secured server infrastructure.",
+          "IsUsed": false
+        },
+        {
+          "Text": "Clear recovery procedures will ensure the system can be restored quickly in the event of data loss, technical failures, or security incidents.",
+          "IsUsed": false
+        }
+      ],
+      "PromptKey": "DefaultListPrompt"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.BindableListView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="RootView">
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <HorizontalStackLayout Spacing="10">
+            <Button
+                x:Name="GenerateButton"
+                Clicked="OnGenerateClicked"
+                IsEnabled="{Binding IsUsable, Source={x:Reference Name=RootView}}"
+                Style="{StaticResource DefaultButtonStyle}"
+                Text="Generate" />
+
+            <Button
+                Clicked="OnAddClicked"
+                Style="{StaticResource DefaultButtonStyle}"
+                Text="Add" />
+
+            <ActivityIndicator
+                HorizontalOptions="Center"
+                IsRunning="{Binding IsGenerating, Source={x:Reference Name=RootView}}"
+                IsVisible="{Binding IsGenerating, Source={x:Reference Name=RootView}}"
+                VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <ScrollView>
+            <VerticalStackLayout
+                x:Name="FormContainer"
+                Padding="10"
+                Spacing="8" />
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentView>

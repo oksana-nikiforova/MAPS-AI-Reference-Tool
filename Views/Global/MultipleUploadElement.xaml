@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.MultipleUploadElement"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+    x:Name="Multiple">
+    <ContentView.Triggers>
+        <DataTrigger
+            Binding="{Binding IsFileChosen, Source={x:Reference Multiple}}"
+            TargetType="ContentView"
+            Value="False">
+            <Setter Property="Content">
+                <Setter.Value>
+                    <VerticalStackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="{Binding UploadLabel, Source={x:Reference Multiple}}" />
+                        <HorizontalStackLayout Spacing="10">
+                            <Button
+                                Clicked="OnFilePickerClicked"
+                                Style="{StaticResource UploadButtonStyle}"
+                                Text="Choose File" />
+
+                            <Label Text="No file chosen" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Setter.Value>
+            </Setter>
+        </DataTrigger>
+    </ContentView.Triggers>
+
+    <VerticalStackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontSize="16"
+            Text="{Binding UploadLabel, Source={x:Reference Multiple}}" />
+        <HorizontalStackLayout Spacing="10">
+            <Button
+                Clicked="OnFilePickerClicked"
+                Style="{StaticResource UploadButtonStyle}"
+                Text="Choose File" />
+            <Button
+                Clicked="OnClearClicked"
+                Style="{StaticResource UploadButtonStyle}"
+                Text="Clear files" />
+        </HorizontalStackLayout>
+        <CollectionView
+            x:Name="FilesList"
+            Margin="10"
+            ItemsSource="{Binding Filelist, Source={x:Reference Multiple}}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Padding="5" Spacing="10">
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="FASolid"
+                                    Glyph="{x:Static fa:Solid.File}"
+                                    Color="{StaticResource Primary}" />
+                            </Image.Source>
+                        </Image>
+                        <Label
+                            FontSize="14"
+                            Text="{Binding Path}"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentView>

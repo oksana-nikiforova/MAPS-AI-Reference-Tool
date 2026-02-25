@@ -1,0 +1,68 @@
+<ContentView
+    x:Class="MAPSAI.Views.UploadElement"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+    xmlns:local="clr-namespace:MAPSAI.Services"
+    x:Name="Root">
+
+    <ContentView.Triggers>
+        <DataTrigger
+            Binding="{Binding IsFileChosen, Source={x:Reference Root}}"
+            TargetType="ContentView"
+            Value="False">
+            <Setter Property="Content">
+                <Setter.Value>
+                    <VerticalStackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="{Binding UploadLabel, Source={x:Reference Root}}" />
+                        <HorizontalStackLayout Spacing="10">
+                            <Button
+                                Clicked="OnFilePickerClicked"
+                                Style="{StaticResource UploadButtonStyle}"
+                                Text="Choose File" />
+
+                            <Label Text="No file chosen" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Setter.Value>
+            </Setter>
+        </DataTrigger>
+    </ContentView.Triggers>
+
+    <VerticalStackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontSize="16"
+            Text="{Binding UploadLabel, Source={x:Reference Root}}" />
+        <HorizontalStackLayout Spacing="10">
+            <Button
+                Clicked="OnFilePickerClicked"
+                Style="{StaticResource UploadButtonStyle}"
+                Text="Choose File" />
+            <Image>
+                <Image.Source>
+                    <FontImageSource
+                        FontFamily="FASolid"
+                        Glyph="{x:Static fa:Solid.File}"
+                        Color="{StaticResource Primary}" />
+                </Image.Source>
+            </Image>
+
+            <Label Text="{Binding FilePath, Source={x:Reference Root}}" VerticalOptions="Center" LineBreakMode="NoWrap" WidthRequest="70"/>
+
+            <Button Clicked="DeleteFile" Style="{StaticResource DefaultButtonStyle}" WidthRequest="40">
+                <Button.ImageSource>
+                    <FontImageSource
+                        FontFamily="FASolid"
+                        Glyph="{x:Static fa:Solid.TrashCan}"
+                        Size="20"
+                        Color="White" />
+                </Button.ImageSource>
+            </Button>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentView>

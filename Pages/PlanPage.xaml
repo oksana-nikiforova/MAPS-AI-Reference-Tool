@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAPSAI.Pages.PlanPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:planviews="clr-namespace:MAPSAI.Views.Plan"
+    xmlns:projectscopeviews="clr-namespace:MAPSAI.Views.ProjectScope"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+    xmlns:views="clr-namespace:MAPSAI.Views">
+
+    <Grid
+        Padding="6"
+        ColumnSpacing="6"
+        RowSpacing="0">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.0*" />
+            <ColumnDefinition Width="8.0*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Stroke="#005050">
+
+
+            <material:TabView>
+
+                <material:TabItem Title="Standard">
+                    <material:TabItem.ContentTemplate>
+                        <DataTemplate>
+                            <projectscopeviews:StandardView />
+                        </DataTemplate>
+                    </material:TabItem.ContentTemplate>
+                </material:TabItem>
+
+                <material:TabItem Title="Export">
+                    <material:TabItem.ContentTemplate>
+                        <DataTemplate>
+                            <planviews:ExportPlan />
+                        </DataTemplate>
+                    </material:TabItem.ContentTemplate>
+                </material:TabItem>
+
+            </material:TabView>
+
+        </Border>
+
+        <Border Grid.Column="1" Stroke="#005050">
+            <Grid RowDefinitions="Auto,*,Auto">
+                <views:NavigationView Grid.Row="0" />
+
+                <planviews:PlanTreeView Grid.Row="1" />
+
+                <views:ConsoleView Grid.Row="2" />
+            </Grid>
+        </Border>
+
+    </Grid>
+
+</ContentPage>

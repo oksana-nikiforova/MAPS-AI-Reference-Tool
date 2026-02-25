@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.ProjectScope.ProjectScopeSpecificView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MAPSAI.Views">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="8">
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="Project Scope Specific Definition"
+                VerticalOptions="Center" />
+
+            <Label Text="Deliverables:" />
+
+            <controls:BindableListView
+                CheckboxProperty="IsUsed"
+                CollectionProperty="Collection"
+                DisplayProperty="Text"
+                ItemSourceObject="{Binding Deliverables}" />
+
+            <Label Text="Resource Requirements:" />
+            <controls:BindableListView
+                CheckboxProperty="IsUsed"
+                CollectionProperty="Collection"
+                DisplayProperty="Text"
+                ItemSourceObject="{Binding ResourceRequirements}" />
+
+            <controls:BindableEntryView EntryItem="{Binding OperationsSupport}" />
+
+            <Label Text="Safety, Security Risks:" />
+            <controls:BindableListView
+                CheckboxProperty="IsUsed"
+                CollectionProperty="Collection"
+                DisplayProperty="Text"
+                ItemSourceObject="{Binding SafetySecurity}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentView>

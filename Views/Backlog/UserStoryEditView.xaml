@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.Backlog.UserStoryEditView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MAPSAI.Views"
+    xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+    xmlns:local="clr-namespace:MAPSAI.Services"
+    xmlns:model="clr-namespace:MAPSAI.Models"
+    x:Name="RootView">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="8">
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="User Story Definition" />
+            <Grid ColumnDefinitions="250,*,Auto,*" ColumnSpacing="10">
+
+                <VerticalStackLayout Grid.Column="0">
+                    <Label Text="As User (Role)" />
+                    <Entry
+                        Completed="OnUserEntryCompleted"
+                        Placeholder="Role"
+                        Text="{Binding SelectedStory.User, Mode=TwoWay}" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1">
+                    <Label Text="I want to (Goal or Task)" />
+                    <Entry
+                        Completed="OnUserEntryCompleted"
+                        Placeholder="Goal"
+                        Text="{Binding SelectedStory.Story}" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2">
+                    <Label Text="Priority" />
+                    <HorizontalStackLayout Spacing="10">
+                        <Picker
+                            x:Name="picker"
+                            SelectedItem="{Binding SelectedStory.Priority, Mode=TwoWay}"
+                            WidthRequest="150">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>low</x:String>
+                                    <x:String>medium</x:String>
+                                    <x:String>high</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Button
+                            Clicked="GeneratePriority"
+                            IsEnabled="{Binding IsWorking, Source={x:Reference Name=RootView}}"
+                            Style="{StaticResource DefaultButtonStyle}"
+                            Text="Generate" />
+
+                        <ActivityIndicator
+                            HorizontalOptions="Center"
+                            IsRunning="{Binding IsGenerating, Source={x:Reference Name=RootView}}"
+                            IsVisible="{Binding IsGenerating, Source={x:Reference Name=RootView}}"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="3" IsVisible="{Binding StoryPoints, Source={x:Reference Name=RootView}}">
+                    <Label Text="Story Points" />
+                    <HorizontalStackLayout Spacing="10">
+                        <Entry Text="{Binding SelectedStory.StoryPoints, Mode=TwoWay}" WidthRequest="150" />
+
+                        <Button
+                            Clicked="GenerateStoryPoints"
+                            IsEnabled="{Binding IsWorking, Source={x:Reference Name=RootView}}"
+                            Style="{StaticResource DefaultButtonStyle}"
+                            Text="Generate" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
+
+            <controls:BindableEntryView EntryItem="{Binding SelectedStory.Purpose}" />
+
+            <Label Text="Acceptance criteria:" />
+
+            <controls:BindableListView
+                CheckboxProperty="IsUsed"
+                CollectionProperty="Collection"
+                DisplayProperty="Text"
+                ItemSourceObject="{Binding SelectedStory.AcceptanceCriteria}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentView>

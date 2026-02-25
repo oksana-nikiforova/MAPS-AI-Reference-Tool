@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.UML.ExportView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAPSAI.Services">
+    <VerticalStackLayout Spacing="10">
+
+        <Label
+            FontAttributes="Bold"
+            FontSize="17"
+            Text="{Binding ExportTitle}"
+            VerticalOptions="Center" />
+
+        <Button
+            Clicked="ExportDiagramImage"
+            Style="{StaticResource DefaultButtonStyle}"
+            Text="PNG" />
+
+        <Button
+            Clicked="ExportDiagramText"
+            Style="{StaticResource DefaultButtonStyle}"
+            Text="Mermaid" />
+
+        <Button
+            Clicked="ExportDiagramTextPlantUML"
+            Style="{StaticResource DefaultButtonStyle}"
+            Text="PlantUML" />
+
+    </VerticalStackLayout>
+</ContentView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.UML.MermaidView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:MAPSAI.Converters"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:Base64PlaceholderConverter x:Key="Base64PlaceholderConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <Grid RowDefinitions="*, Auto">
+        <WebView
+            x:Name="MermaidWebView"
+            Grid.Row="0"
+            HorizontalOptions="Fill"
+            IsVisible="True"
+            VerticalOptions="Fill" />
+
+        <Image
+            x:Name="FallbackImage"
+            Grid.Row="0"
+            Aspect="AspectFit"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            Source="maps_ai_hq.png"
+            VerticalOptions="Center"
+            WidthRequest="800" />
+
+
+        <uranium:ExpanderView Grid.Row="1">
+
+            <uranium:ExpanderView.Style>
+                <Style ApplyToDerivedTypes="True" TargetType="Layout">
+                    <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDark}" />
+                </Style>
+            </uranium:ExpanderView.Style>
+
+            <uranium:ExpanderView.Header>
+                <Label
+                    Margin="10"
+                    Text="Diagram code"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </uranium:ExpanderView.Header>
+
+            <Editor
+                AutoSize="TextChanges"
+                BackgroundColor="White"
+                FontSize="16"
+                HeightRequest="400"
+                Placeholder="Enter your text here..."
+                Text="{Binding MermaidDiagram, Converter={StaticResource Base64PlaceholderConverter}}"
+                TextColor="Black" />
+
+            <!--  IsReadOnly="True"  -->
+        </uranium:ExpanderView>
+    </Grid>
+</ContentView>
+
+

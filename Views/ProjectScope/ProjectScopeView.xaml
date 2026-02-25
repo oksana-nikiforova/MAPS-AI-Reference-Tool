@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.ProjectScope.ProjectScopeView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MAPSAI.Views"
+    xmlns:local="clr-namespace:MAPSAI.Services">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="8">
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="Project Scope Definition" />
+
+            <Grid ColumnDefinitions="*,200" ColumnSpacing="10">
+
+                <VerticalStackLayout Grid.Column="0" Spacing="5">
+                    <Label Text="Project title" />
+                    <Entry Placeholder="Title" Text="{Binding Title, Mode=TwoWay}" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1" Spacing="5">
+                    <Label Text="Project number" />
+                    <Entry Placeholder="Identifier" Text="{Binding ProjectNumber, Mode=TwoWay}" />
+                </VerticalStackLayout>
+
+            </Grid>
+
+            <controls:BindableEntryView EntryItem="{Binding ProjectPurpose}" />
+
+            <controls:BindableEntryView EntryItem="{Binding Background}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentView>

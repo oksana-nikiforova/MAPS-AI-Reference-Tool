@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="MAPSAI.Views.Plan.PlanProcessingPopup"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    <VerticalStackLayout
+        Padding="10"
+        HorizontalOptions="Center"
+        Spacing="15"
+        VerticalOptions="Center">
+        <Label
+            x:Name="InfoLabel"
+            FontSize="18"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Preparing selected plan sections..."
+            TextColor="{StaticResource Primary}" />
+
+        <Label
+            x:Name="ProgressLabel"
+            FontSize="18"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Generating..."
+            TextColor="{StaticResource Primary}" />
+
+        <Label
+            x:Name="OutputLabel"
+            FontSize="12"
+            Text="Generating..."
+            TextColor="{StaticResource Primary}"
+            WidthRequest="800" />
+
+        <Button
+            Padding="12"
+            Clicked="OnCancelClicked"
+            Style="{StaticResource DefaultButtonStyle}"
+            Text="Cancel"
+            TextColor="White" />
+
+
+        <ActivityIndicator
+            x:Name="CancelIndicator"
+            HeightRequest="30"
+            IsRunning="False"
+            IsVisible="False"
+            WidthRequest="30"
+            Color="{StaticResource Primary}" />
+
+    </VerticalStackLayout>
+</toolkit:Popup>

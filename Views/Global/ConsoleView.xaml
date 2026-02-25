@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.ConsoleView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui">
+    <uranium:ExpanderView x:Name="Expander" Grid.Row="1">
+
+        <uranium:ExpanderView.Style>
+            <Style ApplyToDerivedTypes="True" TargetType="Layout">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDark}" />
+            </Style>
+        </uranium:ExpanderView.Style>
+
+        <uranium:ExpanderView.Header>
+            <Label
+                Margin="10"
+                Text="Console"
+                TextColor="White"
+                VerticalOptions="Center" />
+        </uranium:ExpanderView.Header>
+
+        <VerticalStackLayout
+            Padding="6"
+            BackgroundColor="Black"
+            Spacing="3">
+            <Label
+                HorizontalOptions="Start"
+                Text="&gt;_console"
+                TextColor="White"
+                VerticalOptions="Center" />
+
+            <CollectionView
+                x:Name="LogCollection"
+                HeightRequest="160"
+                ItemsSource="{Binding Logs}"
+                SelectionMode="None"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout>
+                            <Label
+                                HorizontalOptions="FillAndExpand"
+                                Text="{Binding .}"
+                                TextColor="White" />
+                            <Button
+                                Clicked="CopyToClipboard"
+                                CommandParameter="{Binding .}"
+                                HeightRequest="16"
+                                Style="{StaticResource IconButtonStyle}"
+                                VerticalOptions="Start">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="FASolid"
+                                        Glyph="{x:Static fa:Solid.Copy}"
+                                        Size="12"
+                                        Color="{StaticResource Primary}" />
+                                </Button.ImageSource>
+                            </Button>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+
+    </uranium:ExpanderView>
+
+</ContentView>

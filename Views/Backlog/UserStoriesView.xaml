@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAPSAI.Views.Backlog.UserStoriesView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAPSAI.Services">
+    <ContentView.Triggers>
+        <DataTrigger
+            Binding="{Binding HaveStories}"
+            TargetType="ContentView"
+            Value="False">
+            <Setter Property="Content">
+                <Setter.Value>
+                    <VerticalStackLayout Padding="10">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="Extracted Users &amp; Stories:" />
+
+                        <Label FontSize="14" Text="No User Stories! Please upload Business Process model!" />
+                    </VerticalStackLayout>
+                </Setter.Value>
+            </Setter>
+        </DataTrigger>
+    </ContentView.Triggers>
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Extracted Users &amp; Stories:" />
+
+            <Button
+                Margin="5"
+                Clicked="OnGenerateClicked"
+                Style="{StaticResource DefaultButtonStyle}"
+                Text="Generate All" />
+
+            <CollectionView ItemsSource="{Binding UserStoryGroups}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label FontAttributes="Bold" Text="{Binding Key}" />
+
+                            <CollectionView ItemsSource="{Binding Stories}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Label
+                                            Margin="15,0,0,5"
+                                            Padding="10"
+                                            local:CursorBehavior.Cursor="Hand"
+                                            BackgroundColor="Transparent"
+                                            LineBreakMode="WordWrap"
+                                            Text="{Binding Story}"
+                                            TextColor="{AppThemeBinding Light=Black,
+                                                                        Dark=White}">
+
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="OnStoryTapped" />
+                                            </Label.GestureRecognizers>
+
+                                            <Label.Triggers>
+                                                <DataTrigger
+                                                    Binding="{Binding IsSelected}"
+                                                    TargetType="Label"
+                                                    Value="True">
+                                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                                    <Setter Property="TextColor" Value="White" />
+                                                </DataTrigger>
+                                            </Label.Triggers>
+
+                                        </Label>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentView>

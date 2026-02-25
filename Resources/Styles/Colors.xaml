@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--  Note: For Android please see also Platforms\Android\Resources\values\colors.xml  -->
+
+    <!--  Primary colors  -->
+    <Color x:Key="Primary">#005050</Color>
+    <!--  Very dark cyan  -->
+    <Color x:Key="PrimaryDark">#003838</Color>
+    <!--  Hover/Pressed tumšāks tonis  -->
+    <Color x:Key="PrimaryDarkText">#F0F8F8</Color>
+    <!--  Teksts uz tumšas pogas  -->
+
+    <!--  Secondary colors  -->
+    <Color x:Key="Secondary">#DFD8F7</Color>
+    <!--  Maigs violets tonis  -->
+    <Color x:Key="SecondaryDarkText">#F0F8F8</Color>
+    <!--  Tumšāks violets kontrastam  -->
+
+    <!--  Accent / Tertiary  -->
+    <Color x:Key="Tertiary">#F0F8F8</Color>
+    <!--  Dziļi violets zils  -->
+    <Color x:Key="Magenta">#D600AA</Color>
+    <!--  Spilgts akcents (CTA / brīdinājumi)  -->
+
+    <!--  Background & Basic  -->
+    <Color x:Key="White">#FFFFFF</Color>
+    <Color x:Key="Black">#000000</Color>
+    <Color x:Key="OffBlack">#1F1F1F</Color>
+    <Color x:Key="MidnightBlue">#190649</Color>
+    <!--  Tumšs zils fona akcents  -->
+
+    <!--  Grayscale scale  -->
+    <Color x:Key="Gray100">#E1E1E1</Color>
+    <Color x:Key="Gray200">#C8C8C8</Color>
+    <Color x:Key="Gray300">#ACACAC</Color>
+    <Color x:Key="Gray400">#919191</Color>
+    <Color x:Key="Gray500">#6E6E6E</Color>
+    <Color x:Key="Gray600">#404040</Color>
+    <Color x:Key="Gray900">#212121</Color>
+    <Color x:Key="Gray950">#141414</Color>
+
+    <!--  Brushes  -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Black}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}" />
+    <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}" />
+    <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}" />
+    <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}" />
+    <SolidColorBrush x:Key="Gray100Brush" Color="{StaticResource Gray100}" />
+    <SolidColorBrush x:Key="Gray200Brush" Color="{StaticResource Gray200}" />
+    <SolidColorBrush x:Key="Gray300Brush" Color="{StaticResource Gray300}" />
+    <SolidColorBrush x:Key="Gray400Brush" Color="{StaticResource Gray400}" />
+    <SolidColorBrush x:Key="Gray500Brush" Color="{StaticResource Gray500}" />
+    <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}" />
+    <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}" />
+    <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}" />
+</ResourceDictionary>
