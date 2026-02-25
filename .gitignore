@@ -11,6 +11,7 @@
 *.sln.docstates
 
 [Rr]esources/Raw/ML
+[Ii]nstaller
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -382,3 +383,4 @@ FodyWeavers.xsd
 /Installer/Output/MAPSAI_Setup-2.bin
 /Installer/Output/MAPS-AI_v4.7_Setup.zip
 /Resources/Raw/LLM/Phi3Mini/Phi-4-mini-instruct-Q4_K_M.gguf
+/Installer/MAPSAI_Setup_script.iss
