@@ -6,7 +6,6 @@ using MAPSAI.Models;
 using MAPSAI.Services.Files.Models;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.IO;
 using System.Text.RegularExpressions;
 using Style = DocumentFormat.OpenXml.Wordprocessing.Style;
 
@@ -37,46 +36,53 @@ namespace MAPSAI.Services.Files
                         var body = new Body();
 
                         var sectPr = new SectionProperties(
-                            new PageSize { Width = 11906, Height = 16838 }, // A4
-                            new PageMargin
-                            {
-                                Top = 1440,
-                                Bottom = 1440,
-                                Left = 1440,
-                                Right = 1440,
-                                Header = 720,
-                                Footer = 720,
-                                Gutter = 0
-                            });
+                             new PageSize() { Width = 11906, Height = 16838 }, // A4
+                             new PageMargin()
+                             {
+                                 Top = 1440,
+                                 Bottom = 1440,
+                                 Left = 1440,
+                                 Right = 1440,
+                                 Header = 720,
+                                 Footer = 720,
+                                 Gutter = 0
+                             }
+                         );
 
                         EnsureFooterWithPageNumbers(mainPart, body, pageXofY: true);
 
                         mainPart.Document.Append(body);
+
                         AddStyles(mainPart);
 
                         int bulletNumberingId = EnsureBulletNumbering(mainPart);
 
+                        // ===== TITLE =====
                         body.Append(CreateParagraph(title, "Title"));
+
+                        // ===== TABLE OF CONTENTS =====
                         AddTableOfContents(body);
-                        body.Append(new Paragraph(new Run(new Break { Type = BreakValues.Page })));
+
+                        body.Append(new Paragraph(new Run(new Break() { Type = BreakValues.Page })));
 
                         bool firstLevel1Seen = false;
 
                         foreach (var section in FlattenPreOrder(data))
                         {
-                            // (Optional) If you only want active nodes:
-                            // if (!section.IsActive) continue;
-
                             string content = CleanSectionContent(section);
 
                             if (section.Level == 1)
                             {
                                 if (firstLevel1Seen)
-                                    body.Append(new Paragraph(new Run(new Break { Type = BreakValues.Page })));
-
+                                {
+                                    body.Append(new Paragraph(
+                                        new Run(new Break() { Type = BreakValues.Page })
+                                    ));
+                                }
                                 firstLevel1Seen = true;
                             }
 
+                            // ===== HEADING =====
                             string headingStyle = section.Level switch
                             {
                                 1 => "Heading1",
@@ -86,22 +92,31 @@ namespace MAPSAI.Services.Files
 
                             body.Append(CreateParagraph(section.Value, headingStyle));
 
+                            // ===== TABLE DETECTION =====
                             if (IsMarkdownTable(content))
+                            {
                                 AppendMarkdownTable(body, content);
+                            }
                             else if (ContainsBulletList(content))
+                            {
                                 AppendBulletList(body, content, bulletNumberingId);
+                            }
                             else
+                            {
                                 body.Append(CreateParagraph(content, "Normal"));
+                            }
                         }
 
                         EnableAutoUpdateFields(mainPart);
 
-                        // Ensure SectionProperties exists at end of body
-                        if (body.Elements<SectionProperties>().LastOrDefault() == null)
+                        var existingSectPr = body.Elements<SectionProperties>().LastOrDefault();
+                        if (existingSectPr == null)
+                        {
                             body.Append(sectPr);
+                        }
 
                         mainPart.Document.Save();
-                    } // <-- CRITICAL: closes docx package here
+                    }
                 });
 
                 // Now file is fully closed; safe to read

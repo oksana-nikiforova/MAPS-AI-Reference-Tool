@@ -261,8 +261,8 @@ public partial class PlanProcessingPopup : Popup
         });
 
         using var client = new HttpClient();
-        //client.BaseAddress = new Uri("https://maps-ai-service-api.onrender.com");
-        client.BaseAddress = new Uri("http://localhost:3000");
+        client.BaseAddress = new Uri("https://maps-ai-service-api.onrender.com");
+        //client.BaseAddress = new Uri("http://localhost:3000");
 
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
