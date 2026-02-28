@@ -284,9 +284,6 @@ public partial class PlanProcessingPopup : Popup
         var sb = new StringBuilder();
         foreach (var s in stories)
         {
-            // Build a stable story line.
-            // NOTE: Purpose is GeneratableEntry; in your code you display "Text" elsewhere, but here you used Purpose as object.
-            // We'll try Purpose.Text if it exists; otherwise fall back to ToString().
             var purposeText = GetStringPropertyOrToString(s.Purpose, "Text");
 
             sb.Append("- As ").Append(s.User?.Trim() ?? "a user")
@@ -302,7 +299,6 @@ public partial class PlanProcessingPopup : Popup
             if (!string.IsNullOrWhiteSpace(s.StoryPoints))
                 sb.Append(" Story points: ").Append(s.StoryPoints.Trim()).Append('.');
 
-            // Optional: acceptance criteria (as nested bullets)
             var ac = s.AcceptanceCriteria?.Collection;
             if (ac != null && ac.Count > 0)
             {
@@ -335,10 +331,6 @@ public partial class PlanProcessingPopup : Popup
         return sb.ToString().Trim();
     }
 
-    /// <summary>
-    /// Tries common property names like Text/Name/Title/Description. Falls back to ToString().
-    /// This keeps your MAUI types flexible without needing per-type serializers.
-    /// </summary>
     private static string FormatListElement(object? item)
     {
         if (item == null) return "";
